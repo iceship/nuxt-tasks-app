@@ -1,6 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  modules: ["@nuxt/eslint", "nuxt-mcp-dev"],
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint']
-})
+  css: ["@picocss/pico"],
+  compatibilityDate: "2025-07-15",
+  eslint: {
+    config: {
+      stylistic: {
+        semi: true,
+        quotes: 'double',
+        commaDangle: "always-multiline",
+      },
+    },
+  },
+});

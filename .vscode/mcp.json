@@ -1,11 +1,13 @@
 {
-	"servers": {
-		"antfu/nuxt-mcp": {
-			"type": "http",
-			"url": "https://mcp.nuxt.com/sse",
-			"gallery": "https://api.mcp.github.com",
-			"version": "1.0.0"
-		}
-	},
-	"inputs": []
+  "servers": {
+    "nuxt": {
+      "type": "sse",
+      "url": "http://localhost:3000/__mcp/sse"
+    },
+    "nuxt-docs": {
+      "type": "sse",
+      "url": "https://mcp.nuxt.com/sse"
+    }
+  },
+  "inputs": []
 }
