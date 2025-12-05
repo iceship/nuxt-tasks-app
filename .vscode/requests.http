@@ -1,0 +1,33 @@
+### 기본 변수 설정 (필요시 변경 가능)
+@baseUrl = http://localhost:3000/api
+
+### 헬로우 월드 테스트 (GET)
+GET {{baseUrl}}/hello
+
+### 1. 모든 할 일 목록 조회 (GET)
+GET {{baseUrl}}/tasks
+
+### 2. 새로운 할 일 추가 (POST)
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Nuxt 4 완벽 적응하기",
+  "description": "API 테스트 파일을 작성하고 테스트한다.",
+  "completed": false
+}
+
+### 3. 특정 할 일 조회 (GET by ID)
+# 테스트 하실 때 실제 존재하는 ID로 1을 바꿔주세요.
+GET {{baseUrl}}/tasks/1
+
+### 4. 할 일 수정/완료 처리 (PUT)
+PUT {{baseUrl}}/tasks/1
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+### 5. 할 일 삭제 (DELETE)
+DELETE {{baseUrl}}/tasks/1

@@ -1,5 +1,5 @@
 import { createError } from "h3";
-import { findTask } from "../../../../utils/task-store";
+import { findTask } from "../../../utils/task-store";
 
 export default defineEventHandler((event) => {
   const id = event.context.params?.id;

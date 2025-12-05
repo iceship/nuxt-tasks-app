@@ -1,5 +1,5 @@
 import { createError, readBody } from "h3";
-import { updateTask } from "../../../../utils/task-store";
+import { updateTask } from "../../../utils/task-store";
 
 type PutBody = {
   title?: string;
